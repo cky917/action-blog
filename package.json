@@ -1,0 +1,23 @@
+{
+  "name": "action-blog",
+  "version": "1.0.0",
+  "description": "blog base on github action",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cky917/action-blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cky917/action-blog/issues"
+  },
+  "homepage": "https://github.com/cky917/action-blog#readme",
+  "devDependencies": {
+    "vuepress": "^1.0.0-rc.1"
+  }
+}
