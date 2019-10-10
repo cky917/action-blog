@@ -22,34 +22,34 @@ module.exports = (themeConfig, ctx) => {
   }, themeConfig)
 
   const defaultBlogPluginOptions = {
+    globalPagination: {
+      itemLayout: 'Post',
+      itemPermalink: '/:year/:month/:day/:slug',
+      pagination: {
+        lengthPerPage: 10,
+        sorter: (prev, next) => {
+          const prevTime = new Date(prev.frontmatter.date).getTime()
+          const nextTime = new Date(next.frontmatter.date).getTime()
+          return prevTime - nextTime > 0 ? -1 : 1
+        }
+      },
+    },
     directories: [
       {
         id: 'post',
         dirname: '_posts',
         // layout: 'IndexPost', defaults to `Layout.vue`
         itemLayout: 'Post',
-        path: '/',
-        itemPermalink: '/:year/:month/:day/:slug',
-        pagination: {
-          lengthPerPage: 10,
-          sorter: (prev, next) => {
-            const prevTime = new Date(prev.frontmatter.date).getTime()
-            const nextTime = new Date(next.frontmatter.date).getTime()
-            return prevTime - nextTime > 0 ? -1 : 1
-          }
-        },
-      }
+        path: '/'
+      },
     ],
     frontmatters: [
       {
         id: "tag",
         keys: ['tag', 'tags'],
         path: '/tag/',
-        // layout: 'Tag',  defaults to `FrontmatterKey.vue`
-        frontmatter: { title: 'Tag' },
-        pagination: {
-          lengthPerPage: 5
-        }
+        layout: 'FrontMatterKey',
+        scopeLayout: 'Layout'
       }
     ]
   }

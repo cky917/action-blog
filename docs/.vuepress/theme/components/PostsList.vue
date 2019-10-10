@@ -20,8 +20,9 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import { Pagination, SimplePagination } from '@vuepress/plugin-blog/lib/client/components'
-import PostsListItem from './PostsListItem.vue'
+import PostsListItem from './PostsListItem'
 
 export default {
   name: 'PostsList',
@@ -38,7 +39,6 @@ export default {
   },
   computed: {
     listPosts() {
-      console.dir(this.$pagination)
       return this.$pagination.pages
     }
   },

@@ -30,7 +30,7 @@ export default {
 <style lang="stylus" scoped>
 .post-list-item
   border 1px solid #eaeaea
-  padding 2em 3em
+  padding 1rem 2rem
   margin 10px
   word-break break-all
   transition: .3s ease all

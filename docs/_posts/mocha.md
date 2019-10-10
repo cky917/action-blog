@@ -1,9 +1,9 @@
 ---
 title: 单元测试 & mocha框架
 date: 2017-01-06 12:08:00
-tags: 
-- node.js学习笔记 
-- web前端知识
+tags:
+  - node.js学习笔记
+  - web前端知识
 ---
 ## 一、什么是单元测试
 

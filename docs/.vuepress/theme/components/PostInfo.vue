@@ -3,11 +3,9 @@
     <span class="info-item" v-if="post.frontmatter.date">{{ post.frontmatter.date | dateFormatter }}</span>
     <span class="info-item">阅读：1234</span>
     <span class="info-item">评论：1234</span>
-    <ul class="info-item item-info-tags">
-      <li v-for="tag in tagList" :key="tag.key" class="item-info-tag">
-        <NavLink :link="tag.path">{{ tag.key }}</NavLink>
-      </li>
-    </ul>
+    <span v-for="tag in tagList" :key="tag.key" class="item-info-tag info-item">
+      <NavLink :link="tag.path">{{ tag.key }}</NavLink>
+    </span>
   </div>
 </template>
 <script>
@@ -23,10 +21,11 @@ export default {
   },
   computed: {
     tagList() {
-      if (!this.post.frontmatter.tags) return []
-      const tags = this.post.frontmatter.tags.split(',')
+      if (!(this.post && this.post.frontmatter && this.post.frontmatter.tags)) return []
+      const tags = this.post.frontmatter.tags
+      const tagsList = typeof tags === 'string' ? [tags] : tags
       const tagMap = this.$tag.map
-      return tags.map(tag => tagMap[tag])
+      return tagsList.map(tag => tagMap[tag])
     }
   }
 }
@@ -37,16 +36,14 @@ export default {
   color: #666;
   font-size 0.8em;
   align-items: center
+  flex-wrap wrap
   .info-item
-    margin-right: 20px
-  .item-info-tags
-    display flex
-    list-style none
+    margin: .3rem 2rem .3rem 0
   .item-info-tag
-    margin 0 5px
     border 1px solid #eee
-    border-radius 20px
-    padding 3px 10px
+    margin-right: 1rem
+    border-radius 2rem
+    padding 0.3rem 0.5rem
     a
       color #666
       &:hover
