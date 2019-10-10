@@ -14,10 +14,7 @@
 <script>
 
 export default {
-  props: ['tags'],
-  mounted() {
-    console.log(this.tags)
-  }
+  props: ['tags']
 }
 </script>
 
