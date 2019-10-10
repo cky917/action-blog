@@ -86,8 +86,8 @@ var a = new Vue3({
 })
 ```
 
-<img src.="../public/images/5.png">
-<img src.="../public/images/6.png">
+![](../public/images/5.png)
+![](../public/images/6.png)
 
 ## Observer、Watcher、Dep
 
@@ -246,9 +246,9 @@ var a = new Vue3({
   }
 })
 ```
-<img src.="../public/images/7.png"/>
-<img src.="../public/images/9.png">
-<img src.="../public/images/8.png"/>
+![](../public/images/7.png)
+![](../public/images/9.png)
+![](../public/images/8.png)
 
 之前对于`vm.age`和`vm.name`也有`getter`和`setter`的重写，和这里的`vm._data.age`的`getter/setter`是不一样的，在`vm.age`的`getter`是去读`vm._data.age`，从而触发`vm._data.age`的`getter`，`setter`同理。其实真正对于数据改变的监听是在`_data`属性上的`getter`和`setter`上完成的。
 
@@ -322,7 +322,7 @@ methodsToPatch.forEach(function(method) {
 这个`array.js`文件`export`出了一个 `arrayMethods`，`arrayMethods` 继承了 `Array.prototype`，并在自身定义了那些变异方法来拦截原始数组的那些方法调用。
 我们知道，当我们访问对象上的一个属性的时候，假如对象自身不存在这个属性，则会延续到它的 `__proto__` 上去找，找不到就继续。所以上面只需要把数组的 `__proto__` 指向 vue 自己的 `ArrayMethods` 就实现了拦截部分属性并继承原始 `Array` 的其他原型方法，十分巧妙。
 
-<img src.="../public/images/10.png"/>
+![](../public/images/10.png)
 
 官方文档说，不支持直接对数组`this.xx[n] = xyz`这样的赋值监听，提供了`Vue.set`和`this.$set` 方法，其实这个方法内部在前一篇也讲了，就是调用了`splice`这个变异方法从而实现监听。
 
@@ -531,10 +531,10 @@ a.$watch('age', function(newValue, oldValue) {
 })
 ```
 
-<img src.="../public/images/11.png">
-<img src.="../public/images/12.png">
-<img src.="../public/images/13.png">
-<img src.="../public/images/14.png">
+![](../public/images/11.png)
+![](../public/images/12.png)
+![](../public/images/13.png)
+![](../public/images/14.png)
 
 其中`Dep.id`为1的是对`name`值的依赖收集器，它下面有id为1、4、6的`watcher`。
 `Dep.id`为2的是对`age`的依赖收集器，它的收集的订阅者有`id`为2、3、5、6、7的`watcher`

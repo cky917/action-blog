@@ -114,13 +114,13 @@ export default {
 
 所以在还未进行任何操作，只是引入了Vue时，Vue的状态如下
 
-<img src.="../public/images/1.png"/>
+![](../public/images/1.png)
 
-<img src.="../public/images/2.png"/>
+![](../public/images/2.png)
 
-<img src.="../public/images/3.png"/>
+![](../public/images/3.png)
 
-<img src.="../public/images/4.png"/>
+![](../public/images/4.png)
 
 ## 知识点
 

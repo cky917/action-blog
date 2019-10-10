@@ -104,10 +104,10 @@ a.$on('sing', function(song){
 })
 ```
 
-<img src.="../public/images/15.png"/>
-<img src.="../public/images/16.png"/>
+![](../public/images/15.png)
+![](../public/images/16.png)
 可以看到事件注册到了`_events`里，然后`$emit`触发。而且方法返回的是`vm`实例，所以我们还可以进行链式调用
-<img src.="../public/images/17.png"/>
+![](../public/images/17.png)
 
 ## vm.$off
 
