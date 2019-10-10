@@ -1,5 +1,31 @@
 module.exports = {
   base: '/action-blog/',
-  title: '蹦蹬儿你个蹦蹬儿',
-  description: '蹦蹬儿你个蹦蹬儿'
+  title: 'cky',
+  description: 'cky',
+  themeConfig: {
+    header: {
+    },
+    nav: [
+      {
+        text: 'Home',
+        link: '/'
+      },
+      {
+        text: 'Posts',
+        link: '/posts'
+      },
+      {
+        text: 'About Me',
+        link: '/about-me'
+      },
+      {
+        text: 'Github',
+        link: 'https://github.com/cky917'
+      }
+    ],
+    lang: {
+      noRelatedPosts: '没有文章'
+    },
+    pagination: {}
+  }
 }
