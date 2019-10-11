@@ -1,7 +1,6 @@
 const removeMd = require('remove-markdown')
 
-function getSummary(themeConfig, ctx) {
-  const strippedContent = ctx._strippedContent
+function getSummary(strippedContent, summaryLength) {
   if (!strippedContent) {
     return
   }
@@ -9,7 +8,7 @@ function getSummary(themeConfig, ctx) {
     strippedContent
       .trim()
       .replace(/^#+\s+(.*)/, '')
-      .slice(0, themeConfig.summaryLength)
+      .slice(0, summaryLength)
   ) + ' ...'
 }
 
@@ -26,12 +25,7 @@ module.exports = (themeConfig, ctx) => {
       itemLayout: 'Post',
       itemPermalink: '/:year/:month/:day/:slug',
       pagination: {
-        lengthPerPage: 10,
-        sorter: (prev, next) => {
-          const prevTime = new Date(prev.frontmatter.date).getTime()
-          const nextTime = new Date(next.frontmatter.date).getTime()
-          return prevTime - nextTime > 0 ? -1 : 1
-        }
+        lengthPerPage: 10
       },
     },
     directories: [
@@ -40,7 +34,19 @@ module.exports = (themeConfig, ctx) => {
         dirname: '_posts',
         // layout: 'IndexPost', defaults to `Layout.vue`
         itemLayout: 'Post',
-        path: '/'
+        path: '/',
+        pagination: {
+          sorter: (prev, next) => {
+            function getTime(page) {
+              return page.frontmatter.date
+                ? new Date(page.frontmatter.date).getTime()
+                : page.lastUpdated
+            }
+            const prevTime = getTime(prev)
+            const nextTime = getTime(next)
+            return prevTime - nextTime > 0 ? -1 : 1
+          }
+        },
       },
     ],
     frontmatters: [
@@ -68,6 +74,9 @@ module.exports = (themeConfig, ctx) => {
       options: {
         margin: 16
       }
+    }],
+    ['@vuepress/last-updated', {
+      transformer: (timestamp) => timestamp
     }],
     ['@vuepress/search', {
       searchMaxSuggestions: 10
@@ -102,7 +111,7 @@ module.exports = (themeConfig, ctx) => {
    */
   config.extendPageData = function (pageCtx) {
     if (themeConfig.summary) {
-      pageCtx.summary = getSummary(themeConfig, pageCtx)
+      pageCtx.summary = getSummary(ctx._strippedContent, themeConfig.summaryLength)
     }
   }
 

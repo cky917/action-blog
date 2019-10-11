@@ -63,3 +63,5 @@ typings/
 docs/.vuepress/dist/
 
 *.DS_Store
+
+.vscode/

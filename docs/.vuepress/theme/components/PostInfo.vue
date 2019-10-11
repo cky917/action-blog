@@ -1,6 +1,6 @@
 <template>
   <div class="post-info">
-    <span class="info-item" v-if="post.frontmatter.date">{{ post.frontmatter.date | dateFormatter }}</span>
+    <span class="info-item" v-if="postTime">{{ postTime | dateFormatter }}</span>
     <span class="info-item">阅读：1234</span>
     <span class="info-item">评论：1234</span>
     <span v-for="tag in tagList" :key="tag.key" class="item-info-tag info-item">
@@ -20,6 +20,9 @@ export default {
     }
   },
   computed: {
+    postTime() {
+      return this.post.frontmatter.date || this.post.lastUpdated
+    },
     tagList() {
       if (!(this.post && this.post.frontmatter && this.post.frontmatter.tags)) return []
       const tags = this.post.frontmatter.tags
