@@ -111,7 +111,7 @@ module.exports = (themeConfig, ctx) => {
    */
   config.extendPageData = function (pageCtx) {
     if (themeConfig.summary) {
-      pageCtx.summary = getSummary(ctx._strippedContent, themeConfig.summaryLength)
+      pageCtx.summary = getSummary(pageCtx._strippedContent, themeConfig.summaryLength)
     }
   }
 
