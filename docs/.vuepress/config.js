@@ -23,11 +23,18 @@ module.exports = {
       },
       {
         text: 'Github',
-        link: 'https://github.com/cky917'
+        link: 'https://github.com/cky917/action-blog'
       }
     ],
     lang: {
       noRelatedPosts: '没有文章'
+    },
+    comment: {
+      clientID: '9068103e415d7a74bf5a',
+      clientSecret: 'a091cca6ab37509e364b2af223f220f9c53307b7',
+      repo: 'action-blog',
+      owner: 'cky917',
+      admin: ['cky917']
     },
     pagination: {}
   }

@@ -27,6 +27,14 @@
 import Affix from './Affix'
 import throttle from 'lodash.throttle'
 
+// get offset top
+function getAbsoluteTop(dom) {
+  return dom && dom.getBoundingClientRect
+    ? dom.getBoundingClientRect().top +
+    document.body.scrollTop +
+    document.documentElement.scrollTop
+    : 0;
+}
 export default {
   name: 'Toc',
   components: { Affix },
@@ -38,6 +46,7 @@ export default {
   },
   mounted() {
     this.headHeight = document.querySelector('.header').offsetHeight + 20
+    this.eventHandler()
   },
   computed: {
     visible() {
@@ -52,6 +61,48 @@ export default {
     }
   },
   watch: {
+    activeIndex(index) {
+      const activeToc = this.$refs.chairTocItem[index]
+      activeToc.scrollIntoView({
+        block: 'center',
+        behavior: 'smooth'
+      })
+    }
+  },
+  methods: {
+    eventHandler() {
+      const throttled = throttle(() => {
+        if (this.visible) {
+          this.checkActiveToc()
+        }
+      }, 100)
+      window.addEventListener('scroll', throttled)
+      this.$once('hook:beforeDestroy', () => {
+        window.removeEventListener('scroll', throttled)
+      })
+    },
+    checkActiveToc() {
+      const headings = this.$page.headers || []
+      const scrollTop = document.body.scrollTop + document.documentElement.scrollTop
+      const viewHeight = window.innerHeight - this.headHeight
+
+      const addLink = index => {
+        this.activeIndex = index;
+      }
+
+      for (let i = 0; i < headings.length; i++) {
+        const dom = document.getElementById(headings[i].slug);
+        const top = getAbsoluteTop(dom);
+        const distance = top - scrollTop
+
+        if (distance < (viewHeight / 2)) {
+          addLink(i);
+        } else {
+          if (!i) addLink(i);
+          break;
+        }
+      }
+    }
   },
 }
 </script>
@@ -60,7 +111,7 @@ export default {
 .toc
   font-size .85em
   line-height 1.5
-  width: 15em;
+  width: 10em;
   font-size: 0.75em;
   z-index: 100;
   border-radius: 5px;
@@ -85,17 +136,18 @@ export default {
     cursor: pointer;
     word-break: break-all;
     margin-bottom 10px
+    &.active
+      position: relative;
+      left: -3px;
+      background: #f3f3f3;
+      border-left: 3px solid #3498DB;
     a
       transition:.3s ease all;  
       color $textColor
       &:hover
         color: $accentColor;
         outline: none;
-      &.active
-        position: relative;
-        left: -3px;
-        background: #f3f3f3;
-        border-left: 3px solid #3498DB;
+
 for i in range(2, 6)
   .toc-h{i}
     padding-left: 0.5rem * (i - 1);

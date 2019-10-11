@@ -8,15 +8,17 @@
       <router-link v-if="$pagination.hasPrev" :to="$pagination.prevLink">Prev</router-link>
       <router-link v-if="$pagination.hasNext" :to="$pagination.nextLink">Next</router-link>
     </div>
+    <Comment class="comment"/>
   </div>
 </template>
 <script>
+import Comment from '../components/Comment'
 import PostInfo from '../components/PostInfo'
 import Toc from '../components/Toc'
 
 export default {
   name: 'Post',
-  components: { PostInfo, Toc },
+  components: { Comment, PostInfo, Toc },
 }
 </script>
 <style lang="stylus" scoped>
