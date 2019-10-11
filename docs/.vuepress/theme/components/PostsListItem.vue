@@ -6,6 +6,7 @@
     
     <p class="post-summary">
       {{ post.frontmatter.summary || post.summary }}
+      <NavLink :link="post.path">  ... [read more]</NavLink>
     </p>
     <PostInfo :post="post" />
   </div>

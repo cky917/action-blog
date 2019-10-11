@@ -8,7 +8,6 @@ import Gitalk from 'gitalk'
 export default {
   name: 'Comment',
   mounted() {
-    console.log(this)
     this.init()
   },
   methods: {

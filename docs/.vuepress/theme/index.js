@@ -9,7 +9,7 @@ function getSummary(strippedContent, summaryLength) {
       .trim()
       .replace(/^#+\s+(.*)/, '')
       .slice(0, summaryLength)
-  ) + ' ...'
+  )
 }
 
 module.exports = (themeConfig, ctx) => {
@@ -111,7 +111,9 @@ module.exports = (themeConfig, ctx) => {
    */
   config.extendPageData = function (pageCtx) {
     if (themeConfig.summary) {
-      pageCtx.summary = getSummary(pageCtx._strippedContent, themeConfig.summaryLength)
+      // excerpt first
+      const summaryContent = pageCtx.excerpt || pageCtx._strippedContent
+      pageCtx.summary = getSummary(summaryContent, themeConfig.summaryLength)
     }
   }
 

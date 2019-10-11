@@ -1,10 +1,7 @@
 module.exports = {
   base: '/action-blog/',
-  title: 'cky',
-  description: 'cky',
-  head: [
-    ['link', { rel: "shortcut icon", href: "/assets/favicons.png"}],
-  ],
+  title: '蹦蹬儿你个蹦蹬儿',
+  description: '',
   themeConfig: {
     header: {
     },
