@@ -7,10 +7,10 @@
         <router-link :to="$localePath">
           <span class="navbar-title" v-if="$siteTitle">{{ $siteTitle }}</span>
         </router-link>
+        <SearchBox class="search-box"/>
         <div class="navbar-toggler" @click="showNavLinks = !showNavLinks">
           <MenuIcon size="1.2x"/>
         </div>
-
         <div
           class="navbar-links"
           :class="{
@@ -52,10 +52,11 @@
 <script>
 import { MenuIcon } from 'vue-feather-icons'
 import throttle from 'lodash.throttle'
+import SearchBox from '@SearchBox'
 
 export default {
   name: 'TheHeaderNavBar',
-  components: { MenuIcon },
+  components: { MenuIcon, SearchBox },
   data() {
     return {
       fixed: false,
@@ -95,11 +96,12 @@ $lineHeight = $navbarHeight - ($gutter * 2)
   color $textColor
   background-color alpha($navbarColor, 0.8)
   transition all 0.5s ease-out
-  overflow hidden
   &.fixed
     position fixed
   .navbar-title
     color $headerTextColor
+  .search-box
+    margin-left 1rem
   .navbar-toggler
     float right
     cursor pointer
