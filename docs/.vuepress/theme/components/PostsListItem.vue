@@ -6,7 +6,7 @@
     
     <p class="post-summary">
       {{ post.frontmatter.summary || post.summary }}
-      <NavLink :link="post.path">  ... [read more]</NavLink>
+      <NavLink :link="post.path" class="read-more">  ... [read more]</NavLink>
     </p>
     <PostInfo :post="post" />
   </div>
@@ -35,7 +35,9 @@ export default {
   margin 10px
   word-break break-all
   transition: .3s ease all
-  width 90%
+  width 100%
+  .read-more
+    color $accentColor
   &:hover
     box-shadow: 0 4px 6px 2px #eee
   .post-title

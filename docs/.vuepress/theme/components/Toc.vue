@@ -1,5 +1,5 @@
 <template>
-  <Affix :offsetTop="headHeight">
+  <Affix :offsetTop="headHeight + 50">
     <div
       v-show="visible"
       class="toc"
@@ -119,7 +119,7 @@ export default {
   .toc-title
     text-align: left;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 2em;
     margin-bottom 20px
   .toc-box
     position: absolute;

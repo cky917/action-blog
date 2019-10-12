@@ -15,13 +15,12 @@
       <PostsListItem :post="post"  v-for="post in listPosts" :key="post.path"/>
     </div>
 
-    <component v-if="$pagination.length > 1 && paginationComponent" :is="paginationComponent"></component>
+    <Pagination v-if="$pagination.length > 1"/>
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
-import { Pagination, SimplePagination } from '@vuepress/plugin-blog/lib/client/components'
 import PostsListItem from './PostsListItem'
 
 export default {
@@ -30,28 +29,11 @@ export default {
     PostsListItem,
   },
   data () {
-    return {
-      paginationComponent: null
-    }
-  },
-  created() {
-    this.paginationComponent = this.getPaginationComponent()
+    return {}
   },
   computed: {
     listPosts() {
       return this.$pagination.pages
-    }
-  },
-  methods: {
-    getPaginationComponent() {
-      const n = THEME_BLOG_PAGINATION_COMPONENT
-      if (n === 'Pagination') {
-        return Pagination
-      }
-      if (n === 'SimplePagination') {
-        return SimplePagination
-      }
-      return Vue.component(n) || Pagination
     }
   }
 }

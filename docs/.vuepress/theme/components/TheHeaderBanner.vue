@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@require '~@theme/styles/variables'
+
 .banner
   cursor default
   height $bannerHeight

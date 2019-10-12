@@ -29,6 +29,16 @@ module.exports = {
     lang: {
       noRelatedPosts: '没有文章'
     },
+    footer: {
+      links: [
+        { link: 'https://wangfeia.com/', text: 'WangF Blog' },
+        { link: 'http://neras.github.io/', text: '有只妖怪' },
+        { link: 'http://www.cnblogs.com/observernotes/', text: 'observernote' },
+        { link: 'http://tangyc.top/', text: '前端唐小胖' },
+        { link: 'https://blog.lyhper.com', text: 'lyhper Blog' },
+        { link: 'https://haofly.net/', text: '豪翔天下' }
+      ]
+    },
     comment: {
       clientID: '9068103e415d7a74bf5a',
       clientSecret: 'a091cca6ab37509e364b2af223f220f9c53307b7',
