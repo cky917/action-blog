@@ -24,6 +24,13 @@ export default {
     validae(val) {
       return ['uv', 'pv']
     }
+  },
+  mounted() {
+    if (window.bszCaller && window.bszTag) {
+      bszCaller.fetch("//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback", function (result) {
+        bszTag.texts(result), bszTag.shows()
+      })
+    }
   }
 }
 </script>

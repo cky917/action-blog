@@ -9,7 +9,6 @@
       <NavLink :link="post.path" class="read-more">  ... [read more]</NavLink>
     </p>
     <PostInfo :post="post" :isSinglePage="false"/>
-    <span class="nico"></span>
   </div>
 </template>
 <script>
@@ -41,22 +40,8 @@ export default {
   overflow hidden
   &:hover
     box-shadow: 0 2px 6px 2px #eee
-    .nico
-      bottom 0
-      opacity 1
-  .nico
-    position absolute
-    right 0
-    bottom -3rem
-    width 4.4rem
-    height 3rem
-    background: url('../../public/nico2.jpeg') center center
-    background-size cover
-    transition .3s ease all
-    opacity 0
   .read-more
     color $accentColor
-
   .post-title
     font-size 1.5em
     line-height 1.3

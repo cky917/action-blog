@@ -81,7 +81,6 @@ module.exports = (themeConfig, ctx) => {
     ['@vuepress/search', {
       searchMaxSuggestions: 10
     }],
-    ['@vuepress/back-to-top'],
     [
       '@vuepress/blog',
       blogPluginOptions,

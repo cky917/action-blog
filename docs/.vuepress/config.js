@@ -5,6 +5,9 @@ module.exports = {
   head: [
     ['link', { rel: "shortcut icon", href: "/favicon.ico"}],
   ],
+  markdown: {
+    lineNumbers: true
+  },
   themeConfig: {
     header: {
     },
