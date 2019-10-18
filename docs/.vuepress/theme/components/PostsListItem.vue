@@ -8,7 +8,7 @@
       {{ post.frontmatter.summary || post.summary }}
       <NavLink :link="post.path" class="read-more">  ... [read more]</NavLink>
     </p>
-    <PostInfo :post="post" />
+    <PostInfo :post="post" :isSinglePage="false"/>
     <span class="nico"></span>
   </div>
 </template>
@@ -32,7 +32,7 @@ export default {
 <style lang="stylus" scoped>
 .post-list-item
   position relative
-  border 1px solid #eaeaea
+  border-bottom 1px solid #eaeaea
   padding 1rem 2rem
   margin 10px
   word-break break-all
@@ -40,7 +40,7 @@ export default {
   width 100%
   overflow hidden
   &:hover
-    box-shadow: 0 4px 6px 2px #eee
+    box-shadow: 0 2px 6px 2px #eee
     .nico
       bottom 0
       opacity 1
