@@ -1,5 +1,4 @@
 module.exports = {
-  base: '/action-blog/',
   title: '蹦蹬儿你个蹦蹬儿',
   description: '',
   head: [
