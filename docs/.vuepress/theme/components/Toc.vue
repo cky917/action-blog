@@ -111,7 +111,7 @@ export default {
 .toc
   font-size .85em
   line-height 1.5
-  width: 10em;
+  width: 10rem;
   font-size: 0.75em;
   z-index: 100;
   border-radius: 5px;
@@ -119,7 +119,7 @@ export default {
   .toc-title
     text-align: left;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom 20px
   .toc-box
     position: absolute;
@@ -128,9 +128,10 @@ export default {
     overflow: auto;
   .toc-lists
     position: absolute;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
     border-left: 3px solid #ccc;
     padding-left: 0;
+    padding-right: 10px;
     margin-top: 0;
   .toc-item
     cursor: pointer;
