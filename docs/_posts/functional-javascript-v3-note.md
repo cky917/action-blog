@@ -1,4 +1,9 @@
-# 函数式编程--functional-javascript-v3学习笔记
+---
+title: 函数式编程--functional-javascript-v3学习笔记
+date: 2019-11-13 17:21:50
+tag: Javascript学习笔记
+---
+
 
 这是我在frontend-masters上学习Kyle Simpson的课程[functional-javascript-v3](https://frontendmasters.com/courses/functional-javascript-v3/)的学习笔记。这个大佬就是《You don't know JS》的作者，
 
