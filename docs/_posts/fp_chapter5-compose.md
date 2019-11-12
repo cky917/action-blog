@@ -3,7 +3,7 @@ title: 函数式编程-组合(译)
 date: 2019-07-30 18:58:21
 tags: web前端知识
 ---
-翻译自[https://mostly-adequate.gitbooks.io/mostly-adequate-guide/](https://mostly-adequate.gitbooks.io/mostly-adequate-guide/)第五章
+翻译自[https://mostly-adequate.gitbooks.io/mostly-adequate-guide/](https://mostly-adequate.gitbooks.io/mostly-adequate-guide/)第五 章
 
 <!-- more -->
 
