@@ -9,6 +9,7 @@
       > {{ index === 0 ? '' : '| ' }}{{ item.text }}</NavLink>
     </p>
     <p>All content copyright <NavLink :link="$localePath" class="link">{{ $siteTitle }}</NavLink> © 2015 • All rights reserved.</p>
+    <p>最后更新时间：{{ (new Date(lastBuildTime)).toLocaleString() }}</p>
     <VisitorCount type="uv"/>
     <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
   </footer>
@@ -19,6 +20,11 @@ import VisitorCount from './VisitorCount'
 export default {
   name: 'TheFooter',
   components: { VisitorCount },
+  data() {
+    return {
+      lastBuildTime: LAST_BUILD_TIME
+    }
+  },
   computed: {
     links() {
       return this.$themeConfig.footer && this.$themeConfig.footer.links || []

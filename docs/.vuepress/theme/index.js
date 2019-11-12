@@ -99,6 +99,7 @@ module.exports = (themeConfig, ctx) => {
   const config = {
     plugins,
     define: {
+      LAST_BUILD_TIME: Date.now(),
       THEME_BLOG_PAGINATION_COMPONENT: themeConfig.paginationComponent
         ? themeConfig.paginationComponent
         : 'Pagination'
