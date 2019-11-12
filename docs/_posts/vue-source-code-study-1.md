@@ -1,6 +1,6 @@
 ---
 title: vue源码学习笔记--初始化流程
-date: 2018-03-08 11:48:00
+date: 2018-03-08 11:48:00 +0800
 tags: vue源码学习
 ---
 [学习代码仓库](https://github.com/cky917/vue-source-code-study)

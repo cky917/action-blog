@@ -1,6 +1,6 @@
 ---
 title: 正则表达式学习笔记
-date: 2019-01-11 01:21:50
+date: 2019-01-11 01:21:50 +0800
 tags: Javascript学习笔记
 ---
 [教程地址](https://zh.javascript.info/regular-expressions)

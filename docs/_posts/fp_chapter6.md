@@ -3,7 +3,7 @@ title: 函数式编程-示例应用(译)
 tags:
   - web前端知识
   - Javascript学习笔记
-date: 2019-07-31 18:31:21
+date: 2019-07-31 18:31:21 +0800
 ---
 
 翻译自[https://mostly-adequate.gitbooks.io/mostly-adequate-guide/](https://mostly-adequate.gitbooks.io/mostly-adequate-guide/)第六章

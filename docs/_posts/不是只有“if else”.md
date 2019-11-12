@@ -1,6 +1,6 @@
 ---
 title: 不是只有if和else
-date: 2015-11-20 10:17:50
+date: 2015-11-20 10:17:50 +0800
 tags: Javascript学习笔记
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: TypeScript学习笔记 - 函数
-date: 2018-02-28 14:25:00
+date: 2018-02-28 14:25:00 +0800
 tags: web前端知识
 ---
 TypeScript学习笔记 - 函数

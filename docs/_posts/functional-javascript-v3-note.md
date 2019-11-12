@@ -1,6 +1,6 @@
 ---
-title: 函数式编程--functional-javascript-v3学习笔记
-date: 2019-11-13 17:21:50
+title: functional-javascript-v3学习笔记
+date: 2019-11-11 17:21:50 +0800
 tag: Javascript学习笔记
 ---
 
