@@ -94,6 +94,7 @@ module.exports = (themeConfig, ctx) => {
         site_url: 'https://blog.chenkeyi.com', // required
         copyright: '2019 Keyi Chen', // optional
         filename: 'atom',
+        dirname: '_posts',
         // How much articles
         count: 20
       }

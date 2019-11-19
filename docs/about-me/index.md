@@ -1,6 +1,7 @@
 ---
 title: 关于我
 layout: Post
+type: page
 ---
 
 ![照骗](https://avatars2.githubusercontent.com/u/12221080?v=3&s=230)
