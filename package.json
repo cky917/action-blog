@@ -19,7 +19,8 @@
   "homepage": "https://github.com/cky917/action-blog#readme",
   "devDependencies": {
     "remove-markdown": "^0.3.0",
-    "vuepress": "^1.0.0-rc.1"
+    "vuepress": "^1.0.0-rc.1",
+    "vuepress-plugin-rss": "^2.0.0"
   },
   "dependencies": {
     "@vuepress/plugin-blog": "^1.3.0",

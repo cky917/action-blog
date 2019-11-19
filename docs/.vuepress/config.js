@@ -8,6 +8,7 @@ module.exports = {
     lineNumbers: true
   },
   themeConfig: {
+    rss: 'https://blog.chenkeyi.com/rss.xml',
     header: {
     },
     nav: [

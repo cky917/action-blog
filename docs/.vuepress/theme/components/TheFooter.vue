@@ -1,5 +1,8 @@
 <template>
   <footer class="footer">
+    <a :href="$themeConfig.rss" target="_blank" class="rss">
+      <RssIcon size="18"/>
+    </a>
     <p>
       友情链接：
       <NavLink
@@ -16,10 +19,11 @@
 </template>
 <script>
 import VisitorCount from './VisitorCount'
+import { RssIcon } from 'vue-feather-icons'
 
 export default {
   name: 'TheFooter',
-  components: { VisitorCount },
+  components: { VisitorCount, RssIcon },
   computed: {
     lastBuildTime() {
       return LAST_BUILD_TIME ? (new Date(+LAST_BUILD_TIME)).toLocaleString() : '-'
@@ -41,6 +45,17 @@ export default {
   color: #BBC7CC;
   text-align: center;
   background: #f8f8f8;
+  .rss
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    height: 27px;
+    width: 30px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   .link 
     color #BBC7CC
     &:hover

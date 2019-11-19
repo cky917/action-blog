@@ -85,6 +85,16 @@ module.exports = (themeConfig, ctx) => {
       '@vuepress/blog',
       blogPluginOptions,
     ],
+    [
+      'vuepress-plugin-rss',
+      {
+        base_url: '/', // required
+        site_url: 'https://blog.chenkeyi.com', // required
+        copyright: '2019 Keyi Chen', // optional
+        // How much articles
+        count: 20
+      }
+    ]
   ]
 
   if (themeConfig.pwa) {
