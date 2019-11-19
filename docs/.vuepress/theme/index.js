@@ -13,6 +13,8 @@ function getSummary(strippedContent, summaryLength) {
 }
 
 module.exports = (themeConfig, ctx) => {
+  const { pages } = ctx
+  console.log(pages)
   // set default theme config
   themeConfig = Object.assign({}, {
     summary: true,
@@ -86,11 +88,12 @@ module.exports = (themeConfig, ctx) => {
       blogPluginOptions,
     ],
     [
-      'vuepress-plugin-rss',
+      require('./plugins/rss.js'),
       {
         base_url: '/', // required
         site_url: 'https://blog.chenkeyi.com', // required
         copyright: '2019 Keyi Chen', // optional
+        filename: 'atom',
         // How much articles
         count: 20
       }

@@ -2869,14 +2869,6 @@ fs-extra@^4.0.2:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
-fs-extra@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.npm.taobao.org/fs-extra/download/fs-extra-5.0.0.tgz#414d0110cdd06705734d055652c5411260c31abd"
-  dependencies:
-    graceful-fs "^4.1.2"
-    jsonfile "^4.0.0"
-    universalify "^0.1.0"
-
 fs-extra@^7.0.1:
   version "7.0.1"
   resolved "https://registry.npm.taobao.org/fs-extra/download/fs-extra-7.0.1.tgz#4f189c44aa123b895f722804f55ea23eadc348e9"
@@ -6416,14 +6408,6 @@ vuepress-plugin-container@^2.0.0:
   resolved "https://registry.npm.taobao.org/vuepress-plugin-container/download/vuepress-plugin-container-2.0.2.tgz#3489cc732c7a210b31f202556e1346125dffeb73"
   dependencies:
     markdown-it-container "^2.0.0"
-
-vuepress-plugin-rss@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npm.taobao.org/vuepress-plugin-rss/download/vuepress-plugin-rss-2.0.0.tgz#9e08479703f5d426305ae4e686d65ba7de562255"
-  dependencies:
-    chalk "^2.4.1"
-    fs-extra "^5.0.0"
-    rss "^1.2.2"
 
 vuepress@^1.0.0-rc.1:
   version "1.0.0-rc.1"
