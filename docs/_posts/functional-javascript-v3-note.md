@@ -931,3 +931,61 @@ transduce(
 // or
 into(transducer, 0, [1, 3, 4, 6, 9, 12, 13, 21])
 ```
+
+## Data Structrue Operations
+
+之前的操作我们都是在数组上进行的，我们现在想让这些`map`、`filter`、`reduce`等操作更具有普遍性，在`list`,`object`等数据结构上也能使用。
+
+### adapter
+
+```js
+const obj = {
+  name: 'Kyle',
+  email: 'Xxx@Qq.com'
+}
+
+function mapObj(mapper, o) {
+  const newObj = {}
+  for (let key of Object.keys(o)) {
+    newObj[key] = mapper(o[key])
+  }
+  return newObj
+}
+
+mapObj(function lower(val) {
+  return val.toLowerCase()
+}, obj)
+
+// { name: 'kyle', email: 'xxx@qq.com' }
+```
+
+同理我们可以写出`filterObj`, `reduceObj`等。
+
+## Monad: FP Data Structure
+
+> Monad: a pattern for pairing data with a set of predicatable behaviors that let it interact with other data+behavior pairings(monads)
+
+Monad就是一种模式，用来将数据与一系列可预测的行为相匹配，让其可以与其他数据和行为能匹配。
+
+```js
+function Just(val) {
+  return { map, chain, ap }
+
+  function map(fn) {
+    return Just( fn(val) )
+  }
+  // aka: bind, flatMap
+  function chain(fn) {
+    return fn(val)
+  }
+
+  function ap(anotherMonad) {
+    return anotherMonad.map(val)
+  }
+}
+
+const fortyOne = Just(41)
+const fortyTwo = fortyOne.map(function inc(v) {
+  return v + 1
+})
+```
