@@ -1,4 +1,3 @@
-const path = require('path')
 module.exports = {
   title: '蹦蹬儿你个蹦蹬儿',
   description: '',
