@@ -6411,9 +6411,9 @@ vuepress-html-webpack-plugin@^3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
-vuepress-plugin-blogrss@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-blogrss/-/vuepress-plugin-blogrss-0.1.1.tgz#65cca6e8c29cc0bcb469a2e2cd38c0b60c9cd1d3"
+vuepress-plugin-blogrss@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-blogrss/-/vuepress-plugin-blogrss-0.1.2.tgz#ce3980ddc85079270ac743bb8ad55097b79c4b58"
   dependencies:
     chalk "^2.4.1"
     fs-extra "^5.0.0"
@@ -6425,9 +6425,9 @@ vuepress-plugin-container@^2.0.0:
   dependencies:
     markdown-it-container "^2.0.0"
 
-vuepress-theme-cky@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/vuepress-theme-cky/-/vuepress-theme-cky-1.0.5.tgz#b4a055820d4b87348db44acc9b3896d215afb98d"
+vuepress-theme-cky@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/vuepress-theme-cky/-/vuepress-theme-cky-1.0.6.tgz#4b39fd50d76e625984bacc6abdd1829b1a924ede"
   dependencies:
     "@vuepress/plugin-blog" "^1.3.0"
     "@vuepress/plugin-last-updated" "^1.1.0"
@@ -6441,7 +6441,7 @@ vuepress-theme-cky@^1.0.5:
     nprogress "^0.2.0"
     remove-markdown "^0.3.0"
     vue-feather-icons "^5.0.0"
-    vuepress-plugin-blogrss "^0.1.1"
+    vuepress-plugin-blogrss "^0.1.2"
 
 vuepress@^1.0.0-rc.1:
   version "1.0.0-rc.1"
