@@ -1,3 +1,4 @@
+const path = require('path')
 module.exports = {
   title: '蹦蹬儿你个蹦蹬儿',
   description: '',
@@ -7,8 +8,12 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
+  theme: 'cky',
   themeConfig: {
-    rss: 'https://blog.chenkeyi.com/atom.xml',
+    rss: {
+      site_url: 'https://blog.chenkeyi.com/',
+      filename: 'atom'
+    },
     header: {
     },
     nav: [
