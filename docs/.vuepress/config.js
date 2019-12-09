@@ -15,6 +15,7 @@ module.exports = {
     },
     header: {
     },
+    pwa: true,
     nav: [
       {
         text: 'Home',
