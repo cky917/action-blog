@@ -20,6 +20,6 @@
     "vuepress": "^1.0.0-rc.1"
   },
   "dependencies": {
-    "vuepress-theme-cky": "^1.0.8"
+    "vuepress-theme-cky": "^1.0.11"
   }
 }
