@@ -1,6 +1,6 @@
 ---
 title: functional-javascript-v3学习笔记
-date: 2019-11-11 17:21:50 +0800
+date: 2019-11-11 17:21:50 +8
 tag: Javascript学习笔记
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: js模块化和webpack相关整理
-date: 2019-6-3 15:05:56 +0800
+date: 2019-6-3 15:05:56 +8
 tags: Javascript学习笔记
 ---
 

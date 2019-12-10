@@ -1,6 +1,6 @@
 ---
 title: node.js学习笔记(五)——常用工具util和事件EventEmitter
-date: 2016-01-04 10:17:50 +0800
+date: 2016-01-04 10:17:50 +8
 tags: node.js学习笔记
 ---
 ### 一、util全局变量

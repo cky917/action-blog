@@ -1,6 +1,6 @@
 ---
 title: node.js学习笔记(八)——HTTP客户端
-date: 2016-01-06 10:19:50 +0800
+date: 2016-01-06 10:19:50 +8
 tags: node.js学习笔记
 ---
 ### 一、http模块提供了两个函数http.request和http.get。

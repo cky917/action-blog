@@ -1,6 +1,6 @@
 ---
 title: 用js原生实现Ajax的get和post
-date: 2015-08-18 10:17:50 +0800
+date: 2015-08-18 10:17:50 +8
 tags: Javascript学习笔记
 
 ---

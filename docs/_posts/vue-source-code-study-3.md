@@ -1,6 +1,6 @@
 ---
 title: vue源码学习笔记--Vue数据响应式原理
-date: 2018-03-19 18:32:00 +0800
+date: 2018-03-19 18:32:00 +8
 tags: vue源码学习
 ---
 [学习代码仓库](https://github.com/cky917/vue-source-code-study)

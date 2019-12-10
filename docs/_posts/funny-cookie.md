@@ -1,6 +1,6 @@
 ---
 title: 好玩的cookie
-date: 2015-07-25 10:17:50 +0800
+date: 2015-07-25 10:17:50 +8
 tags: Javascript学习笔记
 
 ---

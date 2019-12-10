@@ -1,6 +1,6 @@
 ---
 title: TypeScript学习笔记 - 接口、类
-date: 2018-02-28 11:42:00 +0800
+date: 2018-02-28 11:42:00 +8
 tags: web前端知识
 ---
 TypeScript学习笔记 - 接口、类

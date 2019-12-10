@@ -1,6 +1,6 @@
 ---
 title: JavaScript实践
-date: 2015-09-30 10:17:50 +0800
+date: 2015-09-30 10:17:50 +8
 tag: Javascript学习笔记
 ---
 ---

@@ -1,6 +1,6 @@
 ---
 title: 正则表达式学习笔记
-date: 2019-01-11 01:21:50 +0800
+date: 2019-01-11 01:21:50 +8
 tags: Javascript学习笔记
 ---
 [教程地址](https://zh.javascript.info/regular-expressions)
@@ -246,7 +246,7 @@ str.match(reg)   // 'HTML', 'CSS', 'JavaScript'
 
 ```javascript
 let reg = /([01]\d|2[0-3]):[0-5]\d/g;
-"00:00 10:10 23:59 25:99 1:2".match(reg)  // 00:00,10:10,23:59
+"00:00 +8 10:10 23:59 25:99 1:2".match(reg)  // 00:00 +8,10:10,23:59
 
 ```
 
