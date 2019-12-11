@@ -12,5 +12,4 @@ type: page
 现于哔哩哔哩从事前端开发工作
 
 业余爱好：动漫 LOL
-微博：@陈柯伊伊伊伊_
 邮箱：chen_keyi@foxmail.com
